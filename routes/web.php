@@ -57,7 +57,17 @@ use App\Http\Controllers\WishlistController;
   | contains the "web" middleware group. Now create something great!
   |
  */
-
+// cache clear
+Route::get('/clear', function() {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('config:cache');
+    Artisan::call('view:clear');
+    Artisan::call('optimize:clear');
+    Artisan::call('page-cache:clear');
+    return "Cleared!";
+ });
+ 
 Route::controller(DemoController::class)->group(function () {
     Route::get('/demo/cron_1', 'cron_1');
     Route::get('/demo/cron_2', 'cron_2');
