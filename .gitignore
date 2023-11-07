@@ -21,7 +21,6 @@ yarn-error.log
 .idea/
 
 updates/
-composer.lock
 *.lock
 resources/lang/en.json
 .env
@@ -32,3 +31,4 @@ install.zip
 /nbproject
 /public/app-translations
 public/uploads.zip
+shop.sql
